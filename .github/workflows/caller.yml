@@ -1,0 +1,9 @@
+name: caller
+on: push
+jobs:
+  c:
+    uses: PDFtoMark/gab-poc-wf-private/.github/workflows/called.yml@main
+    with:
+      debug: true
+    secrets:
+      ARTIFACTORY_TOKEN: ${{ secrets.NOPE }}
